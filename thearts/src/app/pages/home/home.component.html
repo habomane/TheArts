@@ -1,0 +1,27 @@
+<main>
+
+    <section class="header__video">
+        <div class="bg-video">
+            <video class="bg-video__content" autoplay muted loop>
+                <source src="../../../assets/videos/thearts.mp4" type="video/mp4">
+                Your browser is not supported
+            </video>
+        </div>
+    </section>
+
+
+    <section class="cards__container">
+            <div class="col card" *ngFor="let x of homeGallery">
+               <app-cards [item]="x"></app-cards>
+            </div>
+            
+    </section>
+
+
+    <section class="disclaimer__container">
+        <h2 class="disclaimer__container--header">
+            Custom Orders also available ...
+        </h2>
+    </section>
+
+</main>

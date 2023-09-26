@@ -1,0 +1,20 @@
+
+
+<section class="cards__container">
+    <h2 class="cards__header">Dessert</h2>
+    <div class="cards__container--sub">
+    <div class="cards__item" *ngFor="let x of dessertGallery">
+        <app-cards [item]="x"></app-cards>
+    </div>
+    </div>
+</section>
+
+<section class="custom__container">
+    <h2 class="cards__header--sub">Dessert Orders FAQ</h2>
+    <p class="custom__description">
+        Orders must be made 2 weeks in advance. No pork gelatin products will be used. No baby shower/ gender reveal/ anniversary/ birthday desserts will be made (Aqeeqah and walimah are allowed). prices vary depending on the product, during consultation, the final price will be discussed. Customers must reach out to discuss flavors, design, etc. for custom orders.      
+    </p>
+    <a routerLink="../contact" class="custom__link">Interested?</a>
+</section>
+
+

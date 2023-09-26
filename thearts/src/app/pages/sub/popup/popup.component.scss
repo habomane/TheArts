@@ -1,0 +1,71 @@
+// background should close it 
+
+.popup {
+
+    &__outer {
+    position: fixed;
+    //scrollbar-width: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 25, 25, 0.323);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    &__inner {
+        background-color: white;
+        width: 25rem;
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: flex-end;
+
+        &--x {
+            height: 2.7rem;
+            width: 2.7rem;
+            padding: .5rem;
+            cursor: pointer;
+        }
+    }
+
+    &__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--img {
+            padding: .5rem;
+            height: 15rem;
+            width: 12rem;
+            object-fit: contain;
+            flex: 2;
+            //background-size: contain;
+        }
+
+        &--dir {
+            height: 2.7rem;
+            width: 2.7rem;
+            padding: .5rem;
+            cursor: pointer;
+        }
+    }
+
+    &__text {
+        padding: 2rem;
+        font-size: .8rem;
+
+        &--header {
+            margin-bottom: 1rem;
+            letter-spacing: .05rem;
+        }
+    }
+}
+

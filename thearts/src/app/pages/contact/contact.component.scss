@@ -1,0 +1,214 @@
+$primary-text-sub: 'Cormorant Infant', serif;
+$primary-text-text: 'Jacques Francois', serif;
+$primary-text-special:'Parisienne', cursive;
+$primary-green-dark: #307B71;
+
+@keyframes shake {
+    0% {
+        transform: translateX(-.7rem);
+    }
+    5% {
+        transform: translateX(.7rem);
+    }
+    10% {
+        transform: translateX(-.7rem);
+    }
+    15% {
+        transform: translateX(.7rem);
+    }
+    20% {
+        transform: translateX(-.7rem);
+    }
+    25% {
+        transform: translateX(.7rem);
+    }
+    40% {
+        transform: translateX(-.7rem);
+    }
+    45% {
+        transform: translateX(.7rem);
+    }
+    50% {
+        transform: translateX(-.7rem);
+    }
+    55% {
+        transform: translateX(.7rem);
+    }
+    60% {
+        transform: translateX(-.7rem);
+    }
+    65% {
+        transform: translateX(.7rem);
+    }
+    70% {
+        transform: translateX(-.7rem);
+    }
+    75% {
+        transform: translateX(.7rem);
+    }    
+    80% {
+        transform: translateX(-.7rem);
+    }
+    85% {
+        transform: translateX(.7rem);
+    }   
+    90% {
+        transform: translateX(-.7rem);
+    }
+    95% {
+        transform: translateX(.7rem);
+    }
+    100% {
+        transform: translate(0);
+    }
+    
+}
+
+.shake {
+    animation: shake .4s ease-out;
+    border: 2px solid red;
+}
+.form {
+    &__section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem; 
+
+
+    }
+
+    &__main {
+        display: flex;
+        gap: 1.5rem;
+    }
+    &__container {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 1.4rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+
+        &__group {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            gap: 1.5rem;
+
+            
+        }
+
+    }
+
+    &__header {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        font-weight: 300;
+
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+    &__input {
+        margin-right: 2rem;
+        border-radius: .5rem;
+        transition: all .2s;
+    }
+
+    &__input:active, &__input:hover {
+        transform: scale(1.1);
+    }
+
+
+
+    &__image > img {
+        height: 15rem;
+        width: 15rem;
+    }
+
+    &__dropdown {
+        margin-right: 5rem;
+        border-radius: .5rem;
+        transition: all .2s;
+
+        &--item {
+            text-align: center;
+            font-family: $primary-text-sub;
+        }
+
+        &:active, &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__text {
+        border: 1px solid black;
+        border-radius: .6rem;
+        transition: all .2s;
+
+        &:hover, &:active {
+            transform: scale(1.1);
+        }
+    }
+
+    &__btn {
+        font-family: $primary-text-sub;
+        text-align: center;
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: .5rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        color: #fff;
+        cursor: pointer;
+        transition: all .2s;
+
+        background-color: $primary-green-dark;
+    }
+
+    &__btn:hover {
+        transform: translateY(-.8rem);
+        box-shadow: 0 2rem 4rem rgba(0,0,0, .3);
+    }
+
+    &__btn:active {
+        transform: translate(0);
+        box-shadow: 0 2rem 2rem rgba(0,0,0, .5);
+    }
+
+    
+    
+}
+
+@media screen and (max-width: 800px) {
+
+    .form {
+
+        &__header {
+            text-align: left;
+        }
+        &__container {
+            padding: 2.5rem;
+        }
+        &__image {
+            display: none;
+        }
+    }
+    
+}

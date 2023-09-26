@@ -1,0 +1,160 @@
+$primary-text-sub: 'Cormorant Infant', serif;
+$primary-text-text: 'Jacques Francois', serif;
+$primary-text-special:'Parisienne', cursive;
+$primary-green-dark: #307B71;
+
+
+@keyframes moveInDown {
+
+    0% {
+        transform: translateY(-.7rem);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(-.7rem);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    
+}
+
+.header {
+
+    &__container {
+        width: 100%;
+        background-color: rgba($primary-green-dark, .8);
+        color: #fff;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+
+    }
+
+    &__group {
+        margin: 0rem 2.5rem;
+    }
+
+    &__group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__title {
+        letter-spacing: .2rem;
+        font-size: 1.2rem;
+        font-family: $primary-text-text;
+
+        &:hover {
+            color: rgba(210, 209, 209, 0.956);
+        }
+    }
+
+
+}
+
+.nav__bar {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--list {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    &--item:link, &--item:visited {
+        text-decoration: none;
+        color: #fff;
+
+    }
+    &--item:hover {
+        color: rgb(203, 194, 194);
+
+    }
+    &--condensed {
+        display: none;
+    }
+
+
+    &--sub {
+        list-style: none;
+        position: absolute;
+        padding: 1rem 2rem 1rem 1rem;
+        background-color: rgba(57, 55, 55, 0.763);
+        z-index: 1;
+        
+    }
+
+    &--caret {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 970px) {
+
+
+    .nav__bar {
+
+        position: relative;
+        &--list {
+            display: none;
+
+        }
+
+        &--condensed {
+            display: contents;
+            align-self: flex-end;
+            cursor: pointer;
+        }
+
+        &--spancaret {
+            display: flex;
+            gap: .5rem;
+        }
+
+        &--sub {
+            background-color: rgba(57, 55, 55, 0.963);
+            
+        }
+    }
+
+    .header {
+        &__title {
+            font-size: 1rem;
+        }
+    }
+
+    .visible {
+        position: absolute;
+        display: block;
+        top: 6.25rem;
+        background-color: rgba($primary-green-dark, .4);
+        padding: 2.5rem;
+        right: -2.5rem;
+        animation: moveInDown;
+        transition: all .4s ease-out;
+        z-index: 2;
+    }
+
+}

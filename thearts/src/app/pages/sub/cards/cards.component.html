@@ -1,0 +1,14 @@
+
+<div class="card__background" *ngIf="popupnotvisible">
+    <app-popup (close)="closeModal($event)"></app-popup>
+</div>
+
+<div class="card__container" (click)="openPopUp()">
+    <div class="card__container--img--group">
+        <img src="{{card.imgpath}}" alt="Image of {{card.title}}" class="card__image">
+    </div>
+    <div class="card__container--group">
+        <h2 class="card__header"> {{card.title}} </h2>
+        <p class="card__description"> {{card.description}}</p>
+    </div>
+</div>

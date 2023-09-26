@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: inherit;
+    font-size: 10px; 
+    font-family: 'Jacques Francois', serif;;
+}
+
+$primary-text-sub: 'Cormorant Infant', serif;
+$primary-text-text: 'Jacques Francois', serif;
+$primary-text-special:'Parisienne', cursive;
+$primary-green-dark: #307B71;
+

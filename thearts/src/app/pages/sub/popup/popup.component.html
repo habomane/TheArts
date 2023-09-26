@@ -1,0 +1,16 @@
+<div class="popup__outer">
+    <div class="popup__inner">
+        <div class="popup__header">
+            <img src="assets/svgs/x.svg" alt="Close button" class="popup__header--x" (click)="closeModal()">
+        </div>
+        <div class="popup__main">
+            <img *ngIf="0 <= this.currentImageLocation - 1 " src="assets/svgs/left.svg" alt="Left" class="popup__main--dir" (click)="changeImage(-1)">
+            <img src={{displayedImage}} alt="" class="popup__main--img">
+            <img *ngIf="this.recipe.images.length -1 > this.currentImageLocation" src="assets/svgs/right.svg" alt="Right" class="popup__main--dir" (click)="changeImage(1)">
+        </div>
+        <div class="popup__text">
+            <h3 class="popup__text--header"> {{recipe.title}}</h3>
+            <p class="popup__description">{{recipe.description}}</p>
+        </div>
+    </div>
+</div>

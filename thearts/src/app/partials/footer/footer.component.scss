@@ -1,0 +1,40 @@
+$primary-text-sub: 'Cormorant Infant', serif;
+$primary-text-text: 'Jacques Francois', serif;
+$primary-text-special:'Parisienne', cursive;
+$primary-green-dark: #307B71;
+
+.footer {
+    color: #fff;
+    font-size: 1.1rem;
+    background-color: rgba($primary-green-dark, .8);
+    width: 100%;
+    padding: 1.5rem;
+
+    &__container {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        align-items: center;
+        letter-spacing: .1rem;
+
+        
+        &--icon {
+
+            &--whatsapp {
+                height: 1.85rem;
+                width: 1.85rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+
+    
+
+    
+
+}

@@ -1,0 +1,25 @@
+<header class="header__container">
+   <a routerLink="" class="header__link"> <div class="header__group">
+    <img src="../../../assets/images/logo.png" alt="Arabic logo of 'The Arts'" class="header__logo">
+    <h3 class="header__title">The Arts</h3>
+    </div></a>
+
+    <div class="header__group">
+        <nav class="nav__bar">
+            <button class="nav__bar--condensed menu">
+                <img src="../../../assets/svgs/icons8-menu.svg" alt="Menu Image" class="nav__bar--menu" (click)="DisplayNav()">
+            </button>
+            <ul class="nav__bar--list" [ngClass]="{'visible': navbarvisible}">
+                <li><a routerLink="" class="nav__bar--item" (click)="closeNav()">Home</a></li>
+                <li><a routerLink="about" class="nav__bar--item" (click)="closeNav()">About</a></li>
+                <li><a class="nav__bar--item nav__bar--spancaret" (click)="openBrowse()">Browse <img src="../../../assets/svgs/caret.png" alt="Caret pointing down" class="nav__bar--caret"> </a>
+                <ul class="nav__bar--sub" [ngClass]="{'hidden': hiddenBrowse}">
+                    <li><a routerLink="art" class="nav__bar--item" (click)="closeBrowse()">Art</a></li>
+                    <li><a routerLink="desserts" class="nav__bar--item" (click)="closeBrowse()">Desserts</a></li>
+                </ul></li>
+                <li><a routerLink="contact" class="nav__bar--item" (click)="closeNav()">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</header>

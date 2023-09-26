@@ -1,0 +1,19 @@
+
+
+<section class="cards__container">
+    <h2 class="cards__header">ART</h2>
+    <div class="cards__container--sub">
+    <div class="cards__item" *ngFor="let x of artGallery">
+        <app-cards [item]="x"></app-cards>
+    </div>
+    </div>
+</section>
+
+<section class="custom__container">
+    <h3 class="cards__header--sub">Art Orders FAQ</h3>
+    <p class="custom__description">
+        Orders must be made 2-3 weeks in advance. No orders that include life (humans and animals) will be accepted. Customers much reach out to discuss custom orders. prices depend on size of artwork, and type (ex. alcohol inks, gold leaf...). During consultation, the final price will be discussed.
+    </p>
+    <a routerLink="../contact" class="custom__link">Interested?</a>
+</section>
+

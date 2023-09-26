@@ -1,0 +1,50 @@
+<main>
+    <section class="form__section">
+        <h1 class="form__header">Contact us</h1>
+
+        <div class="form__container">
+        <form action="" class="form__main" #form>
+            
+            <div class="form__container__group">
+                <label for="fullname" class="form__label">Full Name</label>
+                <input type="text" class="form__input" 
+                    required
+                [(ngModel)]="fullname" name="fullname" >
+            </div>
+            <div class="form__container__group">
+                <label for="option" class="form__label">Order Type</label>
+                <select name="option" class="form__dropdown" id="" #type (change)="onSelected(type.value)">
+                    <option value="art" class="form__dropdown--item" >Art</option>
+                    <option value="dessert" class="form__dropdown--item">Dessert</option>
+                    <option value="other" class="form__dropdown--item">Other</option>
+                </select>
+            </div>
+            <div class="form__container__group">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" class="form__input"                     
+                required
+                [(ngModel)]="email" name="email"
+                [ngClass]="{'shake': shakeinput}">
+            </div>
+            <div class="form__container__group">
+                <label for="phonenumber" class="form__label">Phone Number</label>
+                <input type="number" class="form__input"
+                required
+                [(ngModel)]="phonenumber" name="phonenumber">
+            </div>
+            <div class="form__container__group">
+                <label for="message" class="form__label">Message</label>
+                <textarea name="message" id="" cols="30" rows="10" class="form__text"
+                required
+                [(ngModel)]="message" name="message"></textarea>
+            </div>
+            <button type="submit" class="form__btn" (click)="submitForm()">Submit</button>
+        </form>
+
+        <div class="form__image">
+            <img src="../../../assets/images/caligraphy.jpeg" alt="">
+        </div>
+        </div>
+    </section>
+</main>
+
