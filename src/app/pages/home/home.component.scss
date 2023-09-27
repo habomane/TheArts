@@ -41,6 +41,22 @@
     flex: 28%;
 }
 
+@media screen and (max-width: 500px){
+    .col {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    
+
+    .cards__container {
+        flex-direction: column;
+        width: 100%;
+       padding: 1rem;
+       margin-left: -1.5rem;
+    }
+}
 
 
 
@@ -65,7 +81,7 @@
 
 
     .row {
-        width: 80%;
+        width: 100%;
     }
 
     

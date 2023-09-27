@@ -110,7 +110,25 @@ $primary-green-dark: #307B71;
 .hidden {
     display: none;
 }
+@media screen and (max-width: 500px)
+{
+    .header {
+        width: 100%;
+        &__title {
+            display: none;
+        }
 
+    }
+
+    .nav__bar
+    {
+        &--caret
+        {
+            height:1rem;
+            width: 1rem;
+        }
+    }
+}
 @media screen and (max-width: 970px) {
 
 
